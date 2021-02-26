@@ -1,22 +1,15 @@
-const HOUR = 360
+const HOUR = 3600
 const MINUTES = 60
 
 
 //Task 1
 
-function cube(num) {
-    return Math.pow(num,3)
-}
-
+const cube = (num) => Math.pow(num,3);
 console.log(cube(3))
 
 
 //Task 2
-
-function devo(a,b,c) {
-    return (a+b)/c
-}
-
+const devo = (a,b,c) => (a+b)/c;
 console.log(devo(1,2,3))
 
 //Task 3
@@ -103,3 +96,13 @@ function converter(time) {
 }
 
 console.log(converter(500))
+
+
+// 7.
+
+/*
+1. Не має псевдомасиву arguments,
+2. Стрілка не буває методом об'єкта,
+3. Стрілка не може бути конструктором. 
+4. До стрілки не можливо примінити call, apply, bind
+*/
