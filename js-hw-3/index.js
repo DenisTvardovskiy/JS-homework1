@@ -16,33 +16,32 @@
 //Завдання 3
 
 // let arr = [-1,22,3,44,5]
-// let max
-// for(let i=0; i<arr.length;i++){
-//     for(let j=1;j<arr.length-1;j++){
-//         if(arr[i]>arr[j]){
-//             max = arr[i]
-//         }else{
-//             i++
-//         }
-//     }
-// }
+// let max = Math.max(arr)
+// 
 
 // console.log(max)
 
-//Завдання 4
+// Завдання 4
 
-// let nums = ""
-
+// let nums = []
+// let negative = 0
+// let positive = 0
+// let zero =0
 // for(let i=0;i<8;i++){
 //     let num = prompt("("+i+"/8)")
-//     nums+=num
+//     if(num ==0){
+//         zero++;
+//     }else if(num<0){
+//         negative++;
+//     }else if(num>0){
+//         positive++;
+//     }
+//     nums.push(num)
 // }
-// let pos = prompt("Positive numbers amount")
-// let neg = prompt("Negative numbers amount")
-// let zer = prompt("Zeros amount")
 
 
-// alert("Numbers: "+nums+"\nPositive: "+pos+"\nNegative: "+neg+"\nZeros: "+zer)
+
+// alert("Numbers: "+nums+"\nPositive: "+positive+"\nNegative: "+negative+"\nZeros: "+zero)
 
 // Завдання 5
 
@@ -64,8 +63,8 @@
 
 // let result
 // while(true){
-//     let x = prompt()
-//     let y = prompt()
+//     let x = prompt("Enter first number")
+//     let y = prompt("Enter second number")
 //     let action = prompt("action\n*,/,+,-")
 
 //     if(action =="*"){
