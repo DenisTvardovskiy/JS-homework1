@@ -190,26 +190,36 @@ function admin(list) {
     return adm
 }
 
-function avgAge(list) {
+function avgAge(userList) {
     let ag =0
-    for(let i =0; i<list.length;i++){
-        ag += list[i].age
+    for(let i =0; i<userList.length;i++){
+        ag += userList[i].age
     }
-    return Math.floor((ag/list.length)*100)/100
+    return Math.floor((ag/userList.length)*100)/100
 }
 
-function hobby(list) {
-    let hb =[]
-    for(let i=0; i<list.length;i++){
-        if(list[i].hobby[j] in hb){
-            continue
-        }else{
-            hb.push(list[i].hobby[j])
-        }
-    
-    }
-   
+function getHobby(userlist) {
+    const aHobby =[];
+    userlist.map(({hobby})=>{
+        aHobby.push(...hobby);
+    });
+    return aHobby
 }
+
+
+function uniqueHobby(userList) {
+    const hobbyList = getHobby(userList);
+    const unique = {}
+    for(let i=0; i<hobbyList.length;i++){
+        unique[hobbyList[i]] = unique.hasOwnProperty(hobbyList[i]) ? unique[hobbyList[i]]+1: 1;
+    }
+    return "Unique hobbies:  "+Object.keys(unique).join(", ")
+}
+
+
+
 
 console.log(admin(col))
 console.log(avgAge(col))
+console.log(getHobby(col))
+console.log(uniqueHobby(col))
